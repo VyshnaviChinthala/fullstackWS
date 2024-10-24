@@ -35,6 +35,10 @@ background: linear-gradient(to right, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, F
     width:80%;
     border: 0px;
     outline: none;
+    border-bottom: 2px solid transparent;
+}
+.login-btn:focus{
+    border-bottom: 2px solid white;
 }
 .login-btn{
     width:90%;
@@ -44,5 +48,9 @@ background: linear-gradient(to right, #fc67fa, #f4c4f3); /* W3C, IE 10+/ Edge, F
     background: #642B73;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+cursor: pointer;
+border: 3px solid transparent;
+}
+.login-btn:over{
+border: 3px solid white;
 }
