@@ -1,0 +1,45 @@
+p{
+    color:lightpink;
+}
+/*universal selector*/
+//*{
+ color: aquamarine;
+}
+
+/*class selector :best*/
+.myclass{
+    background-color: chocolate;
+}
+
+/*id-selector*/
+
+#myclass{
+    background-color: darkmagenta;
+}
+
+.myclass2
+{
+ background-color: darkgoldenrod;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: thistle;
+    height:100vh;
+    width:100100vw;
+    display:flex;
+}
+.auth-form{
+    height:40vh;
+    width:40vw;
+    background-color:azure(105, 105, 105);
+    border:1px solid red;
+}
+.f1{
+    background-color: bisque;
+}
+.f2{
+    background-color: darkgrey;
+}
+
