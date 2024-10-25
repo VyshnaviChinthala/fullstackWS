@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="./style1.css">
 </head>
 <body>
-    <form class="login-form">
-        <input type="email" name="" class="login-input" id="" placeholder="Email">
-        <input type="password" name=""class="login-input" id="" placeholder="Password">
-        <input type="submit" value="Login" class="login-btn">
+    <form class="login-form" onsubmit="Login(event)">
+        <input type="email" name="" id="email" class="login-input" placeholder="Email" required/>
+        <input type="password" name="" id="password" class="login-input" placeholder="Password" required/>
+        <input type="submit" value="Login" class="login-btn"/>
     </form>
+  <!-- <button class="login-btn" onclick="myfunction()"> Click </button> -->
 </body>
 <script>
     console.log("hello");
@@ -28,11 +29,61 @@
         loc:"b",
         age:200,
         isalive:false
-
+    }
+     let obj2={
+        name:"a1",
+        loc:"b2",
+        age:0,
+        isalive:true
+     }
+     console.log(obj2.name)
+     const {name,loc,age,isalive}=obj2
+     console.log(name)
+    //console.log(obj,obj2);
+    let arr=["a",obj,x,obj2]
+    console.log(arr);
+    let arr2 = [1,2,3,4,5,6];
+    //console.log(arr2);
+    let arr3 =[arr,arr2];
+    let arr4=[...arr,...arr2]
+    console.log(arr3);
+    console.log(arr4);
+    function myfunction(){
+        console.error("hello man")
+        console.warn("hello man")
+    }
+    myfunction()
+    function Login(event) {
+        event.preventDefault()
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        console.log("Login : " + email + " " + password);
+        if (password.length < 5){
+            alert('password should contain more than 5 letters')
+        } else if(email === "admin@gmail.com" && password === "123456") {
+        alert('Login Success!')
+        API()
+        } else{
+            alert('Invalid Credentials!')
+        }
+    }
+    async function API(){
+        console.log("called API");
+        try {
+            const response = await fetch('https://671b713f2c842d92c37ff027.mockapi.io/products')
+            if(response.status ===200){
+                console.log("Success")
+                console.log(await response.json())
+            }
+        
+        } catch (error) {
+            console.error(error)
+            
+        }
 
     }
-    console.log(obj);
-    let arr=["a",obj,x]
-    console.log(arr);
+    
+
+
 </script>
 </html>
