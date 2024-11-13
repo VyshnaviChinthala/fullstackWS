@@ -1,5 +1,5 @@
 import HomeCarousel from "../components/Homecarousel"
-import HomeCards from "../components/Homecards"
+import HomeCards from "../components/HomeCards"
 import SocialCard from "../components/SocialCard"
 
 const Home = () => {

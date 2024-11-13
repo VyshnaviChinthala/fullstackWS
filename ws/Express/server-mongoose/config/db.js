@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect("mongodb+srv://maxneodev:1811321@in-aws.6mvyl.mongodb.net/max-store?retryWrites=true&w=majority&appName=In-AWS")
+mongoose.connect("mongodb+srv://vyshu:20022005@in-aws.e0uhb.mongodb.net/?retryWrites=true&w=majority&appName=In-AWS")
 
 const connection = mongoose.connection;
 
